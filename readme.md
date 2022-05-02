@@ -1,0 +1,1 @@
+This app is created for some practice in JavaScript, no special

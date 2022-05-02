@@ -1,0 +1,65 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap";
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #444;
+  place-items: center;
+  display: grid;
+}
+
+.calculator {
+  width: min(50%, 1000px);
+  min-width: 270px;
+  min-height: 500px;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #222;
+  border-radius: .2rem;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .4rem;
+  display: flex;
+}
+
+.calculator__screen {
+  height: 70px;
+  background-color: #f2f2f2;
+  border-radius: .2rem;
+  padding: 0 1rem;
+  font-family: Poppins, sans-serif;
+  font-size: 1.5rem;
+  line-height: 3;
+  display: block;
+}
+
+.calculator-buttons {
+  flex-grow: 1;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .5rem;
+  display: grid;
+}
+
+.calculator-buttons__button {
+  cursor: pointer;
+  background-color: #ccc;
+  border: none;
+  border-radius: .2rem;
+  font-family: Poppins, sans-serif;
+  font-size: clamp(1rem, 1.4vw, 2rem);
+  transition: background-color .1s, transform 70ms;
+}
+
+.calculator-buttons__button:hover {
+  background-color: #f2f2f2;
+}
+
+.calculator-buttons__button:active {
+  transform: scale(.98);
+}
+
+/*# sourceMappingURL=index.dda6fa14.css.map */
