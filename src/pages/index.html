@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../sass/styles.scss">
-    <script type="module" defer src="../scripts/app.js">module;</script>
+    <script defer src="../scripts/app.js"></script>
     <link rel="icon" href="../images/calculator.png">
-    <title>Calculator App</title>
+    <title>Calculator</title>
 </head>
 <body>
     <main class="app">
@@ -16,29 +16,28 @@
                 <output class="calculator__screen"></output>
             </header>
             <section class="calculator-buttons">
-                <button data-value="%" class="calculator-buttons__button">%</button>
-                <button data-value="/" class="calculator-buttons__button">/</button>
+                <button data-value="%" class="calculator-buttons__button special">%</button>
+                <button data-value="/" class="calculator-buttons__button special">/</button>
                 <button data-value="" class="calculator-buttons__button clear">CE</button>
                 <button data-value="" class="calculator-buttons__button del">DEL</button>
                 <button data-value="7" class="calculator-buttons__button">7</button>
                 <button data-value="8" class="calculator-buttons__button">8</button>
                 <button data-value="9" class="calculator-buttons__button">9</button>
-                <button data-value="*" class="calculator-buttons__button multiplication">X</button>
+                <button data-value="*" class="calculator-buttons__button multiplication special">X</button>
                 <button data-value="4" class="calculator-buttons__button">4</button>
                 <button data-value="5" class="calculator-buttons__button">5</button>
                 <button data-value="6" class="calculator-buttons__button">6</button>
-                <button data-value="-" class="calculator-buttons__button substraction">-</button>
+                <button data-value="-" class="calculator-buttons__button substraction special">-</button>
                 <button data-value="1" class="calculator-buttons__button">1</button>
                 <button data-value="2" class="calculator-buttons__button">2</button>
                 <button data-value="3" class="calculator-buttons__button">3</button>
-                <button data-value="+" class="calculator-buttons__button addition">+</button>
+                <button data-value="+" class="calculator-buttons__button addition special">+</button>
                 <button data-value="0" class="calculator-buttons__button">0</button>
                 <button data-value="00" class="calculator-buttons__button">00</button>
                 <button data-value="." class="calculator-buttons__button">.</button>
                 <button class="calculator-buttons__button equal">=</button>
             </section>
         </section>
-        <!-- <figure class="calculator-illustration"><img src="../images/calculator-ilustration.svg" alt="calculator-ilustration"></figure> -->
     </main>
 </body>
 </html>

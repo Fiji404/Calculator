@@ -1,28 +1,28 @@
 const outputScreen = document.querySelector('.calculator__screen');
 const calculatorButtons = document.querySelectorAll('.calculator-buttons__button');
-const multiplicationButton = document.querySelector('.calculator-buttons__button.multiplication');
 const clearButton = document.querySelector('.calculator-buttons__button.clear');
 const delButton = document.querySelector('.calculator-buttons__button.del');
-const substractionButton = document.querySelector('.calculator-buttons__button.substraction');
-const additionButton = document.querySelector('.calculator-buttons__button.addition');
 const equalButton = document.querySelector('.calculator-buttons__button.equal');
-let numberString;
+const specialButtons = document.querySelectorAll('.calculator-buttons__button.special');
 calculatorButtons.forEach((button)=>{
     button.addEventListener('click', ()=>{
-        numberString = outputScreen.value += button.getAttribute('data-value') ?? '';
-        additionButton.addEventListener('click', ()=>{
-            numberString += Number(outputScreen.textContent) + Number(button.textContent);
+        for (const special of specialButtons)special.removeAttribute('disabled');
+        const currentExpression = outputScreen.value += button.getAttribute('data-value');
+        equalButton.addEventListener('click', ()=>{
+            outputScreen.textContent = eval(currentExpression);
         });
+    });
+});
+specialButtons.forEach((specialButton)=>{
+    specialButton.addEventListener('click', ()=>{
+        for (const special of specialButtons)special.setAttribute('disabled', '');
     });
 });
 clearButton.addEventListener('click', ()=>{
     outputScreen.textContent = '';
 });
-equalButton.addEventListener('click', ()=>{
-    outputScreen.textContent = eval(numberString);
-});
 delButton.addEventListener('click', ()=>{
-    numberString = String(numberString).substring(0, numberString.length - 1);
+    outputScreen.textContent = outputScreen.value.slice(0, -1);
 });
 
 //# sourceMappingURL=index.c719088e.js.map
