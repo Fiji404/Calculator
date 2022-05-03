@@ -533,12 +533,13 @@ const delButton = document.querySelector('.calculator-buttons__button.del');
 const equalButton = document.querySelector('.calculator-buttons__button.equal');
 const specialButtons = document.querySelectorAll('.calculator-buttons__button.special');
 calculatorButtons.forEach((button)=>{
+    let currentExpression;
     button.addEventListener('click', ()=>{
-        for (const special of specialButtons)special.removeAttribute('disabled');
-        const currentExpression = outputScreen.value += button.getAttribute('data-value');
+        currentExpression = outputScreen.textContent += button.getAttribute('data-value');
         equalButton.addEventListener('click', ()=>{
             outputScreen.textContent = eval(currentExpression);
         });
+        for (const special of specialButtons)special.removeAttribute('disabled');
     });
 });
 specialButtons.forEach((specialButton)=>{

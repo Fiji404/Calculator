@@ -67,39 +67,28 @@
   border-radius: .2rem;
   font-family: Poppins, sans-serif;
   font-size: clamp(1.7rem, 1.4vw, 2rem);
-  transition: background-color .1s, transform 70ms;
+  transition: box-shadow .1s;
+  box-shadow: inset 0 -3px 0 3px #7c7c7c;
 }
 
 .calculator-buttons__button[disabled] {
-  background-color: #fcfcfc;
+  background-color: #b4b4b4;
 }
 
 .calculator-buttons__button.del {
   background-color: #ff4a4a;
 }
 
-.calculator-buttons__button.del:hover {
-  background-color: #ff7d7d;
-}
-
 .calculator-buttons__button.equal {
   background-color: #7777ec;
 }
 
-.calculator-buttons__button.equal:hover {
-  background-color: #8d8def;
-}
-
-.calculator-buttons__button:hover {
-  background-color: #fff;
-}
-
 .calculator-buttons__button:active {
-  transform: scale(.98);
+  box-shadow: inset 0 0 0 3px #7c7c7c;
 }
 
 .calculator-buttons__button:focus {
-  outline: 2px solid #dadada;
+  outline: 1px solid #2e2e2e;
 }
 
 /*# sourceMappingURL=index.dda6fa14.css.map */
