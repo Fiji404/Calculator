@@ -30,24 +30,22 @@
 .calculator__screen {
   min-height: 70px;
   max-height: 100px;
-  word-break: break-all;
   letter-spacing: 4px;
   background-color: #fff;
   border-radius: .2rem;
   align-items: center;
-  padding: 0 1rem;
+  padding: 1rem;
   font-size: 1.5rem;
   display: flex;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .calculator__screen::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 .calculator__screen::-webkit-scrollbar-thumb {
-  background-color: #222;
-  border-radius: 2rem;
+  background-color: #588a86;
 }
 
 .calculator__screen::-webkit-scrollbar-track {
